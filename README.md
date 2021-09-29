@@ -20,7 +20,7 @@ First, install the dependencies:
 - Optional: MATLAB Coder
 
 Second, go through the script `nlgreyfast_emps_example.m` step by step.  
-You can also check out `nlidcomb_msd_example`.  
+For an example of the `nlidcomb` interface, see: `nlidcomb_msd_example`.  
 
 ## Credits
 
