@@ -1,7 +1,7 @@
 # nlgreyfast
+## Toolbox for identification of nonlinear state-space grey-box models
 
-This is a toolbox for identification of nonlinear state-space grey-box models.  
-It supports multiple formulations of the optimization problem for parameter estimation:
+This toolbox supports multiple formulations of the optimization problem for parameter estimation:
 
 ![GitHubReadmeFigure](GitHubReadmeFigure.png)
 
