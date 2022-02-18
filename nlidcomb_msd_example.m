@@ -93,9 +93,7 @@ N_group_size = 4;
     [], ...             % expression for additional constraints
     [], ...             % additional constraints upper bound
     'all', ...          % Which of the gap constraints should be taken into account for MS/hybrid method. 
-    '');                % If we provide '-march=native -Ofast' here, then JIT will be switched on: CasADi will attempt
-                        % to precompile the expression with GCC + ccache to make it faster to evaluate.
-                        % However, CasADi will not be able to do thread-based parallelisation of multiple shooting.
+    struct);            % Additional options (currently we keep it empty).
 
 % ## Notes on 'guess_mechatronic'
 % In the MS and hybrid method, we have to give an initial guess on how the states evolve with time (the solver will later refine it). 

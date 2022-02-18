@@ -1,6 +1,15 @@
 function [qm_sim_v X_sim_H rel_errors] = nlid_emps_sim_plant(x0_v, vir_v, param_sim_v, qm_measured_v)
     % simulate EMPS for given input
-    % test this function: 
+    % Inputs parameters:
+    % - *x0_v*: initial state of the simulation
+    % - *vir_v*: the input signal *vir* for the simulation (see EMPS Simulink flowgraph in the original EMPS paper)
+    % - *param_sim_v*: parameters of the EMPS (M1, Fv1, Fc1, OF1)
+    % - *qm_measured_v*: the measured *qm* to check the relative error against
+    % Outputs:
+    % - *qm_sim_v*: simulated *qm*
+    % - *X_sim_V*: simulation of how the states evolve
+    % - *rel_errors*: struct that contains relative errors (TODO: document in more detail)
+    % Example to test this function: 
     %   [qm_sim_v, X_sim_V] = nlid_emps_sim_plant(x0_plant, vir,  param_truth);
     %   dlot(X_sim_V);
 

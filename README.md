@@ -43,5 +43,5 @@ The source of data in `nlid_emps_sim_data_training.mat` and part of the code rel
 If you use this toolbox in your research, please cite:
 
 ```
-TBD
+A. Retzler, J. Swevers, J. Gillis and Zs. Kollár, Shooting methods for identification of nonlinear state-space grey-box models. In _Proceedings of IEEE 17th International Conference on Advanced Motion Control_. Padova, Italy, 2022.
 ```

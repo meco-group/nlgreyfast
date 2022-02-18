@@ -1,5 +1,6 @@
 function opts = mkfullms_opts(n_samples,fs,fmin,fmax)
-    % generate a full multisine with a total number of samples n_samples, components between fmin and fmax, sampled at fs
+    % Create options structure for mkfullms, in order to 
+    % generate a full multisine with a total number of samples *n_samples*, sinusoidal component frequencies between *fmin* and *fmax*, sampled at *fs*.
     opts.df = fs/n_samples; %frequency difference between two consecutive carrier frequencies
     opts.n_leading_zeros = floor(fmin/opts.df);
     opts.n_carriers = round((fmax-fmin+0.5*opts.df)/opts.df);

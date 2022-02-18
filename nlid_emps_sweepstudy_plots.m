@@ -1,5 +1,5 @@
-%% Sweep study for the paper
-% running nlgreyfast on: 
+%% Sweep study for the AMC2022 paper
+% Running nlgreyfast on: 
 % - 100 cases of different input signals, 
 % - different methods including SS, MS, PCMS, PEM, PEM+SS
 % Before running this, you need to MEX the file `emps_plant_atan_m` using MATLAB coder.

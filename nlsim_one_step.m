@@ -1,4 +1,10 @@
 function [one_step, states, controls, params] = nlsim_one_step(ode, fs, N_steps_per_sample)
+% Integrate *ode* with the RK4 method, with a time step  of *1/fs*.
+% Take *N_steps_per_sample* interpolation steps in between (for more precise output, but that will of course be computationally heavier).
+% Returns:
+% - *one_step*: the discrete time state equation
+% - *states*, *controls*, *params*: the CasADi symbols for `one_step(states,controls,params)`.
+
 
 import casadi.*
 dt = 1/fs/N_steps_per_sample;

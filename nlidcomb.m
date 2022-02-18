@@ -4,6 +4,19 @@ function [params_est_v, x0_est_v, diag_data] = nlidcomb(one_sample, fs, u_data_V
     lbx_X_guess_H, X_guess_H, ubx_X_guess_H, additional_constraints_lbg_v, additional_constraints_g, ...
     additional_constraints_ubg_v, enable_gaps_v, fopts)
 % Partially constrained multiple shooting (PCMS) and prediction error method (PEM) for grey-box system identification.
+% Input parameters: most of them are described in *nlgreyfast.m*, for all the remaining see below:
+% - *one_sample*: CasADi function of the model, calculate next state based on current state, input and parameters. On how to build such a function, check *nlidcomb_msd_example.m*. 
+% - *fs*: the sampling rate corresponding to *one_sample*. It is only used in *guess_mechatronic* given to *X_guess_H*.
+% - *fopts*: the struct that contains additional options (all are optional):
+%    - *fit_against_X_guess_H_v*: see *nlgreyfast.m* 
+%    - *fix_states_to_X_guess_H_v: see *nlgreyfast.m*:
+%    - *disable_gaps_per_state_v*: allows you to disable the gaps for only a part of the states
+%    - *gaps_abs_max*: the maximum error allowed in the gaps, which is 0 by default 
+%    - *opti_mode*: allows to formulate the problem using CasADi's opti (this is disabled by default, and might not take all the options into account compared to the original implementation based on *casadi.nlpsol*. For example a Hessian approximation cannot be used.
+%    - *ipopt*: additional options for the Ipopt solver, see documentation of Ipopt and CasADi.
+%    - Note that *fopts* will also be passed on to *sysid_gauss_newton.m*.
+
+% For more details on the meaning of these parameters
 % For N_group_size = 1: equivalent to multiple shooting (MS).
 % For N_group_size = size(y_data_V,1): equivalent to single shooting (SS).
 % For PEM use fit_against_X_guess_H_v and fix_states_to_X_guess_H_v.

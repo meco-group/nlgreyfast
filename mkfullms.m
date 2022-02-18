@@ -1,5 +1,13 @@
 function [obj, crestfactor, signal]=mkfullms(phases, amplitudes, opts)
-    % generate a full multisine
+    % Generate a full multisine.
+    % Input parameters:
+    % - *phases*: the value of the phase for each component in radians.
+    % - *amplitudes*: the value of the amplitude for each component.
+    % - *opts*: struct that contains additional parameters, see mkfullms_opts.
+    % Return values:
+    % - *obj*: objective that can be used for crest factor minimization, if the amplitudes are not optimized: max(|signal|) 
+    % - *crestfactor*: crest factor calculated using peak2rms
+    % - *signal*: the generated multisine signal (1D vertical vector of real floating point numbers).
     amplitudes = mkms_default_amplitudes(amplitudes, opts);
     assert(all(size(phases)==[opts.n_carriers 1]))
     assert(all(size(amplitudes)==[opts.n_carriers 1]))

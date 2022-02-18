@@ -4,8 +4,8 @@
 % - Input: control voltage of the motor.
 % - Output: position of the load.
 % - States: position and velocity of the load.
-% The four parameters to estimate: load inertia, viscous and Coluomb friction coefficients, measurement offset.
-% See our paper for a more detailed description of the system and a figure.
+% The four parameters to estimate: load inertia (M1), viscous and Coluomb friction coefficients (Fv1, Fc1), measurement offset (OF1).
+% See our AMC2022 for a more detailed description of the system and a figure.
 % The _v, _h, _V, _H postfixes contain information about the size of the matrix, see `nlidcomb.h`.
 
 clear all
@@ -21,7 +21,8 @@ model = nlid_emps_models;
 
 %% Identify EMPS using PCMS.
 % The subrecord length should be defined here:
-D = 8;             % multiple shooting
+D = 8;             % partially constrained multiple shooting / hybrid shooting
+%D = 1;            % multiple shooting
 %D = size(qm,1);   % single shooting
 %partially constrained multiple shooting if 1 < D < number of samples
 

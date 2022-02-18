@@ -1,5 +1,5 @@
 function exportgraphics19(filename)
-    % Export current figure to PDF (obsolete solution for MATLAB R2019b)
+    % Export current figure to PDF (now obsolete solution, required for MATLAB R2019b)
     fighandle=gcf;
     fighandle.PaperOrientation='landscape';
     %fighandle.PaperType='uslegal';

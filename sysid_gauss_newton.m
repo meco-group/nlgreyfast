@@ -1,5 +1,10 @@
 function solver = sysid_gauss_newton(e,nlp,V,fopts)
-  % Helper function to create nlpsol object
+  % Helper function to create the CasADi nlpsol object. 
+  % Input parameters: check *nlidcomb.m* for usage.
+  % - *fopts* is a struct with the following possible fields:
+  %   - *compiler_flags*: if non-empty, CasADi will use JIT: the sensitivity and objective functions will be compiled with GCC, using the compiler options given. Suggested is '-Ofast -march=native'.
+  %   - *ipopt*: additional options for Ipopt. See CasADi and Ipopt documentation for them.
+  %   - *hessian*: Hessian approximation to be used, it can be 'gaussnewton' or 'exact' (no approximation, use exact Hessian -> more computationally demanding). 
   if nargin < 4, fopts = struct; end
   if(~isfield(fopts,"generate_on")) fopts.generate_on = false;  end
   if(~isfield(fopts,"compiler_flags")) fopts.compiler_flags = ''; end

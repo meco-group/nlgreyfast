@@ -1,4 +1,5 @@
 function [one_sample, all_samples] = nlsim(ode, fs, N, N_steps_per_sample)
+% Discretize *ode* at *1/fs* time step, return both function *one_step* of the next state (of the discretized system) or *all_samples* of multiple next states (starting from a given initial state). Both shall be computationally efficient (see *expand()* and *mapaccum()* of CasADi).
 
 import casadi.*
 [one_step, states, controls, params] = nlsim_one_step(ode, fs, N_steps_per_sample);

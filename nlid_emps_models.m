@@ -1,5 +1,5 @@
 function [plant_next, plant_ddq_out, system_next, system_vir_out, system_ddq_out, controller_next, controller_vir_out, ode, plant_states, plant_controls, system_states, system_controls, params_sym, system_pulse_next, system_pulse_states, system_pulse_controls, system_pulse_vir_out, system_pulse_ddq_out, tec, fs, system_noise_next, system_newcontroller_next, system_newcontroller_states, system_newcontroller_controls, system_newcontroller_vir_out, system_noise_vir_out, plant_substm_next] = nlid_emps_models
-    %% Build the ODE in CasADi
+    %% Build all the ODEs for the EMPS in CasADi. There are several versions of the ODEs corresponding to different experiments.
     import casadi.*
 
     %internal parameters of this function:

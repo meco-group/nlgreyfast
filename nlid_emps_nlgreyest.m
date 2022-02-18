@@ -1,8 +1,18 @@
 function [param_est_nlgreyest, x0_est, nlgr] = nlid_emps_nlgreyest(EvalFun, param_guess_v, x0_v, fopts)
     % Estimate the parameters and initial state of the EMPS using nlgreyest (from the MathWorks System Identification Toolbox).
+    % Inputs: 
+    % - *EvalFun*: the name of a MATLAB function defined in an M-file, that contains the state and output equations of the model (see *nlgreyest* documentation).
+    % - *param_guess_v*: initial parameters for the estimation
+    % - *x0_v*: initial states for the simulation of the states (will not be decision variables)
+    % - *fopts*: struct with additional options:
+    %    - *param_lb_v* and *param_ub_v*: lower and upper bounds for the parameters to be estimated
+    %    - *x0_free_v*: vector of true and false values: which of the initial states should be estimated (true) or not (false)
+    %    - *u_data_v* and *y_data_v* allows to set custom input and output data for parameter estimation, otherwise they'll be taken from *nlid_emps_sim_data_training.mat*. 
+    % 
     % Command to test it: 
     %   nlid_emps_init
-    %   [param_est_nlgreyest, x0_est_nlgreyest, nlgr_nlgreyest] = nlid_emps_nlgreyest('emps_plant_atan_m_mex', param_guess_v, x0_plant, [false;true])
+    %   fopts = struct; fopts.x0_free_v = [false;true];
+    %   [param_est_nlgreyest, x0_est_nlgreyest, nlgr_nlgreyest] = nlid_emps_nlgreyest('emps_plant_atan_m_mex', param_guess, x0_plant, fopts)
     
     if ~isfield(fopts, 'param_lb_v'), fopts.param_lb_v = -inf(4,1); end
     if ~isfield(fopts, 'param_ub_v'), fopts.param_ub_v = inf(4,1); end
