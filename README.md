@@ -1,7 +1,7 @@
 # nlgreyfast
 ## Toolbox for identification of nonlinear state-space grey-box models
 
-This toolbox supports multiple formulations of the optimization problem for parameter estimation: single shooting, multiple shooting, partially constrained multiple shooting, minimizing the 1-step ahead prediction (PEM). 
+This toolbox supports multiple formulations of the optimization problem for parameter estimation: single shooting (SS), multiple shooting (MS), partially constrained multiple shooting (PCMS), and minimizing the N-step ahead prediction error starting from measured/inferred states (PEM):
 
 ![GitHubReadmeFigure](GitHubReadmeFigure.png)
 
