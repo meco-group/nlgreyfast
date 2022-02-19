@@ -1,7 +1,30 @@
 # nlgreyfast
 ## Toolbox for identification of nonlinear state-space grey-box models
 
-This toolbox supports multiple formulations of the optimization problem for parameter estimation: single shooting (SS), multiple shooting (MS), partially constrained multiple shooting (PCMS), and minimizing the N-step ahead prediction error starting from measured/inferred states (PEM):
+This toolbox supports estimating the parameters `theta` of nonlinear state-space models:
+
+```
+x[k+1]=f(x[k],u[k],theta)
+y[k]=g(x[k],u[k],theta)
+```
+
+The idea is to derive such a discrete-time model using integration (RK4) from a continuous-time physics-based model of a system, and our goal is to know accurately the `theta` parameters of this system. 
+
+This can be done by first making experiments on the system: applying known excitation and measuring the output, then afterwards applying an identification methods like those in this toolbox, in order to find out the parameters in the formulas accurately. We get a so-called grey-box model as a result. 
+
+This toolbox supports multiple formulations of the parameter estimation problem (can also be regarded as a form of optimal control):
+* single shooting (SS), 
+* multiple shooting (MS), 
+* partially constrained multiple shooting (PCMS),
+* minimizing the N-step ahead prediction error (PEM).
+
+As the objective of the optimization here is almost always non-convex, the initial guess of the parameters, that we give to the solver, plays an improtant role. The MS, PCMS and especially the PEM formulation is more robust against initial values of the decision variables for which the system becomes unstable, the simulation of the states becomes non-contractive.
+
+Moreover, if the states can be measured or inferred, this toolbox can use this information in the estimation (required for PEM, can be used in PCMS/MS for initializing the decision variables).
+
+For optimization this tool uses [CasADi](https://casadi.org), so that it can solve certain problems a magnitude faster than `nlgreyest` that ships with the System Identification Toolbox of MATLAB. This can be interesting for applications of online identificiation, e.g. identification combined with control.
+
+A visual representation of the supported formulations:
 
 ![GitHubReadmeFigure](GitHubReadmeFigure.png)
 
