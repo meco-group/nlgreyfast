@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Retzler
+    given-names: András
+    orcid: https://orcid.org/0000-0001-8635-3146
+  - family-names: Gillis
+    given-names: Joris
+    orcid: https://orcid.org/0000-0002-6774-3613
+  - family-names: Swevers
+    given-names: Jan
+    orcid: https://orcid.org/0000-0003-2034-5519
+  - family-names: Kollár
+    given-names: Zsolt
+    orcid: 0000-0001-6384-265X
+title: "Shooting methods for identification of nonlinear state-space grey-box models"
+doi: 10.1109/AMC51637.2022.9729299
+date-released: 2022-03-11
