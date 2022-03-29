@@ -1,6 +1,15 @@
 # nlgreyfast
 ## Toolbox for identification of nonlinear state-space grey-box models
 
+🖼 For visual documentation to help quick understanding, open this large poster, and 🔍 zoom into it with `Ctrl+mouse wheel`:
+
+<a href="https://www.figma.com/file/bq76Z6uR22iQoa1iNRTzX6/nlgreyfast-overview-figure">![figma](GitHubFigmaZoomedOut.png?raw=true)</a>
+
+📽 For a 13 minute introduction, watch the talk about this project here:
+
+<a href="https://youtu.be/J4RziJQEDDE">![youtube](GitHubYouTube.png?raw=true)</a>
+
+
 This toolbox supports estimating the parameters `theta` of nonlinear state-space models:
 
 ```
