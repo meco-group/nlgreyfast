@@ -1,14 +1,19 @@
 # nlgreyfast
 ## Toolbox for identification of nonlinear state-space grey-box models
 
-🖼 For visual documentation to help quick understanding, open this large poster, and 🔍 zoom into it with `Ctrl+mouse wheel`:
+📜 You can find a poster about the toolbox below:
 
-<a href="https://www.figma.com/file/bq76Z6uR22iQoa1iNRTzX6/nlgreyfast-overview-figure">![figma](GitHubFigmaZoomedOut.png?raw=true)</a>
+<a href="https://raw.githubusercontent.com/meco-group/nlgreyfast/master/flanders_make_conference_2022_retzler_nlgreyfast.pdf">![fmconf2022](flanders_make_conference_2022_retzler_nlgreyfast.png?raw=true)</a>
 
-📽 For a 13 minute introduction, watch the talk about this project here:
+> A. Retzler, J. Swevers, J. Gillis, and Zs. Kollár, "Nlgreyfast: toolbox for nonlinear grey-box identification", *Flanders Make Conference*, Gent, Belgium, 2022.
+
+📽 For an introduction, watch the talk about this project here:
 
 <a href="https://youtu.be/J4RziJQEDDE">![youtube](GitHubYouTube.png?raw=true)</a>
 
+🖼 For visual documentation to help quick understanding, open this large poster, and 🔍 zoom into it with `Ctrl+mouse wheel`:
+
+<a href="https://www.figma.com/file/bq76Z6uR22iQoa1iNRTzX6/nlgreyfast-overview-figure">![figma](GitHubFigmaZoomedOut.png?raw=true)</a>
 
 This toolbox supports estimating the parameters `theta` of nonlinear state-space models:
 
@@ -73,4 +78,4 @@ The source of data in `nlid_emps_sim_data_training.mat` and part of the code rel
 
 If you use this toolbox in your research, please cite:
 
-> A. Retzler, J. Swevers, J. Gillis and Zs. Kollár, "Shooting methods for identification of nonlinear state-space grey-box models", *IEEE 17th International Conference on Advanced Motion Control*, Padova, Italy, 2022.
+> A. Retzler, J. Swevers, J. Gillis, and Zs. Kollár, "Shooting methods for identification of nonlinear state-space grey-box models", *IEEE 17th International Conference on Advanced Motion Control*, Padova, Italy, 2022.
