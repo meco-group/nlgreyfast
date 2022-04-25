@@ -1,10 +1,21 @@
 %% Sweep study for the AMC2022 paper
-% Running nlgreyfast on: 
+% This is the script to generate the graphs reported in our paper:
+% > A. Retzler, J. Swevers, J. Gillis, and Zs. Kollár, "Shooting methods for identification of nonlinear state-space 
+% > grey-box models", IEEE 17th International Conference on Advanced Motion Control, Padova, Italy, 2022.
+%
+% It runs nlgreyfast on: 
 % - 100 cases of different input signals, 
 % - different methods including SS, MS, PCMS, PEM, PEM+SS
-% Before running this, you need to MEX the file `emps_plant_atan_m` using MATLAB coder.
-% Test call for MATLAB Coder: emps_plant_atan_m(0, [1;2], 2, 3, 4, 5, 6, {}) 
-% For variable types in MATLAB Coder, you need to specify a 0x0 cell inside an 1x1 cell for varargin.
+%
+% Before running this, you need to MEX the file `emps_plant_atan_m` using MATLAB Coder. The following instructions are for R2019b, 
+% supposing that you have a working MATLAB Coder with a C compiler on your system.
+% 1. Open MATLAB Coder by running `coder`
+% 2. Generate code for function: emps_plant_atan_m
+% 3. Skip warning about SwigRef "warning is not supported for code generation".
+% 4. Enter function call to automatically define input types: `emps_plant_atan_m(0, [1;2], 2, 3, 4, 5, 6, {})`
+% 5. For variable types in MATLAB Coder, varargin should be 0x0 cell inside an 1x1 cell. If it's not like that, it should be specified.
+% 6. Under the "Generate" tab, the "Build type" should be "MEX". Click "Generate".
+% 7. If the build succeeded, you can now run this script.
 
 %% Initialize model parameters 
 nlid_emps_init
