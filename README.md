@@ -7,7 +7,13 @@
 
 > A. Retzler, J. Swevers, J. Gillis, and Zs. Kollár, "Nlgreyfast: toolbox for nonlinear grey-box identification", *Flanders Make Conference*, Gent, Belgium, 2022.
 
-📽 For a detailed introduction, watch the **talk** about this project here:
+📽 For a detailed introduction, watch the **talks** about this project here:
+
+Talk at the [6th Workshop on Nonlinear System Identification Benchmarks](https://www.nonlinearbenchmark.org/history):
+
+<a href="https://youtu.be/4na776RaUDs">![youtube](GitHubYouTubeBenchmarks.png?raw=true)</a>
+
+A shorter talk at the [IEEE 17th International Conference on Advanced Motion Control](http://static.gest.unipd.it/AMC2022/):
 
 <a href="https://youtu.be/J4RziJQEDDE">![youtube](GitHubYouTube.png?raw=true)</a>
 
